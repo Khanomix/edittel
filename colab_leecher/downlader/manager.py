@@ -25,6 +25,7 @@ from colab_leecher.downlader.gdrive import (
 async def downloadManager(source, is_ytdl: bool):
     message = "\n<b>Please Wait...</b> ⏳\n<i>Merging YTDL Video...</i> 🐬"
     BotTimes.task_start = datetime.now()
+    MAX_TASKS: int = None
     if is_ytdl:
         for i, link in enumerate(source):
             await YTDL_Status(link, i + 1)
