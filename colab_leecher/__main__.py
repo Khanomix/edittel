@@ -39,14 +39,7 @@ async def colabxr(client, message):
     text = "<b>◲ Send Me DOWNLOAD LINK(s) 🔗»\n◲</b> <i>You can enter multiple links in new lines and I will download each of them 😉 </i>"
     await message.delete()
     BOT.State.started = True
-    if BOT.State.task_going == False:
-        src_request_msg = await message.reply_text(text)
-    else:
-        msg = await message.reply_text(
-            "I am Already Working ! Please Wait Until I finish !!"
-        )
-        await sleep(15)
-        await msg.delete()
+    
 
 
 async def send_settings(client, message, msg_id, command: bool):
